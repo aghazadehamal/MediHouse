@@ -1,0 +1,290 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #7a57d1;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+}
+
+.menu {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  width: 230px;
+  height: 560px;
+}
+
+.menu-item {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.task-number {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.task-status {
+  float: right;
+}
+
+.content {
+  background-color: #F5F7FA;
+  color: #333;
+  border-radius: 8px;
+  width: 980px;
+  padding: 20px;
+  height: 560px;
+}
+
+button {
+  background-color: #7a57d1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6849a5;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background-color: #005700;
+}
+
+.staff-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+ 
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.staff-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.staff-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-name {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.staff-email {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+}
+
+#staff-selection,
+#service-selection,
+#date-selection,
+#time-selection,
+#confirmation {
+  display: none;
+}
+
+.active-step {
+  display: block;
+}
+
+#staff-selection.active-step {
+  display: block;
+}
+
+#service-selection {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: start;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.service-info {
+  flex-grow: 1;
+}
+
+.service-name {
+  font-size: 1.2em;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.service-duration {
+  font-size: 0.9em;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.service-price {
+  font-size: 1em;
+  color: #4caf50;
+  font-weight: bold;
+  text-align: right;
+}
+
+.date-time-selection {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+}
+
+.calendar-container {
+  margin: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.calendar-header button {
+  border: none;
+  background: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.calendar-header span {
+  font-weight: bold;
+}
+
+.days-row {
+  display: flex;
+}
+
+.day-cell {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 300px;
+}
+
+.date-cell {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.date-cell:hover {
+  background-color: #eaeaea;
+}
+
+.time-slot {
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.time-slot:hover {
+  background-color: #eaeaea;
+}
+
+.prev-month,
+.next-month {
+  font-size: 1.5em;
+}
+
+.month-year {
+  font-size: 1.2em;
+}
+
+#calendar-container {
+  width: 70%;
+}
+
+.selected {
+  border: 2px solid blue;
+}
+
+#date-selection {
+  justify-content: space-around;
+}

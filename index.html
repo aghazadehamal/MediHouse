@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hastane Rezervasyon Sistemi</title>
+    <link rel="stylesheet" href="styles.css" />
+ 
+  </head>
+  <body>
+
+    
+    <div class="container">
+      <div id="menu" class="menu">
+        <div class="menu-item" data-section="staff-selection">
+          <span class="task-number">1</span> Staff
+          <span class="task-status"></span>
+        </div>
+        <div class="menu-item" data-section="service-selection">
+          <span class="task-number">2</span> Service
+          <span class="task-status"></span>
+        </div>
+        <div class="menu-item" data-section="date-selection">
+          <span class="task-number">3</span> Date $ Time
+          <span class="task-status"></span>
+        </div>
+        <div class="menu-item" data-section="time-selection">
+          <span class="task-number">4</span> Confirmation
+          <span class="task-status"></span>
+        </div>
+      </div>
+      
+
+      <div id="content" class="content">
+       
+        <section id="staff-selection" style="display: none">
+          <h2>Select staff</h2>
+          
+        </section>
+
+     
+        <section id="service-selection" style="display: none">
+          <h2>Select service</h2>
+        
+        </section>
+
+      
+        <section  id="date-selection" style="display: none">
+          <h2>Select date & time</h2>
+          <div id="date-container">
+          </div>
+          <div id="calendar-container">
+          
+          </div>
+          
+          
+        </section>
+
+
+        <section  id="time-selection" style="display: none">
+         
+        </section>
+
+       
+        <section id="confirmation" style="display: none">
+          <h2>Confirm details</h2>
+          <form id="confirmation-form">
+            <div>
+              <label for="name">First name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="surname">Last name:</label>
+              <input type="text" id="surname" name="surname" required />
+            </div>
+            <div>
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <button type="submit">Confirm booking</button>
+
+        
+            
+          </form>
+        </section>
+        <div class="navigation-buttons">
+          <button id="backBtn" style="display:none;">Back</button>
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+   
+   
+   
+
+    <script src="script.js"></script>
+    <script src="/Users/amalaghazada/Desktop/Work/button.js"></script>
+    <script src="/Users/amalaghazada/Desktop/Work/theEnd.js"></script>
+   
+
+    
+  </body>
+</html>
