@@ -236,25 +236,25 @@ document.getElementById("confirmation-form").addEventListener("submit", (e) => {
 function confirmBooking() {
   const confirmationSection = document.getElementById("confirmation");
   confirmationSection.innerHTML = `
-    <h2>Rezervasyon Bilgileri</h2>
-    <p><strong>Personel:</strong> ${
+    <h2>Servis məlumatları</h2>
+    <p><strong>Personal:</strong> ${
       staffs.find((staff) => staff.id === reservation.staff_id).name
     }</p>
-    <p><strong>Hizmet:</strong> ${
+    <p><strong>Xidmət:</strong> ${
       services.find((service) => service.id === reservation.service_id).name
     }</p>
-    <p><strong>Tarih:</strong> ${reservation.date}</p>
+    <p><strong>Tarix:</strong> ${reservation.date}</p>
     <p><strong>Saat:</strong> ${reservation.time.start_time} - ${
     reservation.time.end_time
   }</p>
-    <p><strong>Müşteri Adı:</strong> ${reservation.customer.name}</p>
-    <p><strong>Müşteri Soyadı:</strong> ${reservation.customer.surname}</p>
-    <p><strong>Email:</strong> ${reservation.customer.email}</p>
+    <p><strong>Müştəri Adı:</strong> ${reservation.customer.name}</p>
+    <p><strong>Müştəri Soyadı:</strong> ${reservation.customer.surname}</p>
+    <p><strong>E-mail:</strong> ${reservation.customer.email}</p>
     <p><strong>Telefon:</strong> ${reservation.customer.phone}</p>
   `;
 
-  console.log("Rezervasyon bilgileri:", reservation);
-  alert("Rezervasyonunuz onaylandı!");
+  console.log("Servis məlumatları:", reservation);
+  alert("Məlumatlarınız təsdiq olundu!");
 }
 
 function markStepAsCompleted(step) {
@@ -303,6 +303,6 @@ function handleNextButtonClick() {
       changeStep(1);
     }
   } else {
-    alert("Lütfen bu adımı tamamlayın.");
+    alert("zəhmət olmasa bu adımı tamamlayın");
   }
 }
