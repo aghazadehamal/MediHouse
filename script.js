@@ -258,6 +258,11 @@ function confirmBooking() {
 }
 
 function markStepAsCompleted(step) {
+  const completedStepElement = document.querySelector(
+    `.menu-item[data-section="${step}"]`
+  );
+  completedStepElement.classList.add("completed");
+  completedStepElement.classList.remove("active");
   switch (step) {
     case "staff-selection":
       stepCompletionStatus.staffSelectionCompleted = true;

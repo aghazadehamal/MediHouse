@@ -35,6 +35,20 @@ function getStepId(step) {
 }
 
 function updateUIForCurrentStep() {
+  const currentStepElement = document.querySelector(
+    `.menu-item[data-section="${getStepId(currentStep)}"]`
+  );
+  document.querySelectorAll(".menu-item").forEach((item) => {
+    item.classList.remove("active");
+  });
+  currentStepElement.classList.add("active");
+
+  for (let i = 1; i < currentStep; i++) {
+    const previousStepElement = document.querySelector(
+      `.menu-item[data-section="${getStepId(i)}"]`
+    );
+    previousStepElement.classList.add("completed");
+  }
   switch (currentStep) {
     case 1:
       showStaffSelection();
